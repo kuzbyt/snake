@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace snake
@@ -11,6 +12,7 @@ namespace snake
         static void Main(string[] args)
 
         {
+            Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80,25);
             // рамочка
 
@@ -22,6 +24,33 @@ namespace snake
             Point p = new Point(4,5,'*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+
+
             Console.ReadLine();
 
         }
