@@ -14,6 +14,7 @@ namespace snake
         {
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80,25);
+            Console.CursorVisible = false;
             // рамочка
 
             HorizontalLine UpLine = new HorizontalLine(0,78,0,'+'); UpLine.Drow();
@@ -24,34 +25,20 @@ namespace snake
             Point p = new Point(4,5,'*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
 
-
-            Console.ReadLine();
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                
+                Thread.Sleep(100);
+                snake.Move();
+            }
+           
+          //  Console.ReadLine();
 
         }
        

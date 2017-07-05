@@ -33,19 +33,19 @@ namespace snake
 
             if (direction==Direction.RIGHT)
             {
-                x = x - offset;
+                x = x + offset;
             }
             if (direction == Direction.LEFT)
             {
-                x = x +offset;
+                x = x -offset;
             }
             if (direction==Direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             if(direction==Direction.DOWN)
             {
-                y = y -offset;
+                y = y +offset;
             }
 
         }
